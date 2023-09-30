@@ -19,8 +19,8 @@ public class Paciente {
     @Column(name = "NomPaciente")
     private String nomPaciente;
 
-    @Column(name = "ApepPaciente")
-    private String apepPaciente;
+    @Column(name = "ApePaciente")
+    private String apePaciente;
 
     @Column(name = "DocPaciente")
     private String docPaciente;
