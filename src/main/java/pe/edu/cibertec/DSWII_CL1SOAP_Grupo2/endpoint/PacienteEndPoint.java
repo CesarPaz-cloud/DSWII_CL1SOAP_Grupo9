@@ -32,6 +32,32 @@ public class PacienteEndPoint {
         return response;
     }
 
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getPacienteRequest")
+    @ResponsePayload
+    public GetPacienteResponse getPacientesXId(@RequestPayload
+                                               GetPacienteRequest request){
+        GetPacienteResponse response = new GetPacienteResponse();
+        Pacientews pacientews = pacienteConvert
+                .convertPacienteToPacienteWs(
+                        pacienteRepository.findById(request.getId()).get());
+        response.setPaciente(pacientews);
+        return response;
+    }
 
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "postPacienteRequest")
+    @ResponsePayload
+    public PostPacienteResponse postPaciente(@RequestPayload
+                                             PostPacienteRequest request){
+        PostPacienteResponse response = new PostPacienteResponse();
+        Paciente newPaciente =
+                pacienteConvert.convertPacienteWsToPaciente(
+                        request.getPaciente());
+        Pacientews newPacientews =
+                pacienteConvert.convertPacienteToPacienteWs(
+                        pacienteRepository.save(newPaciente)
+                );
+        response.setPaciente(newPacientews);
+        return response;
+    }
 
 }

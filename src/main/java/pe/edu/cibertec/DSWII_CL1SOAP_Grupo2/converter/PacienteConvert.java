@@ -39,8 +39,8 @@ public class PacienteConvert {
     }
     public List<Pacientews> convertPacienteToPacienteWs(List<Paciente> pacienteList) {
         List<Pacientews> pacientewsList = new ArrayList<>();
-        for (Paciente domicilio: pacienteList) {
-            pacientewsList.add(convertPacienteToPacienteWs(domicilio));
+        for (Paciente paciente: pacienteList) {
+            pacientewsList.add(convertPacienteToPacienteWs(paciente));
         }
         return pacientewsList;
     }
