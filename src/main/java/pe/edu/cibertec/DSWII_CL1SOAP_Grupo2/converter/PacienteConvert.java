@@ -14,7 +14,7 @@ public class PacienteConvert {
         Paciente paciente = new Paciente();
         paciente.setIdPaciente(pacientews.getIdPaciente());
         paciente.setNomPaciente(pacientews.getNomPaciente());
-        paciente.setApepPaciente(pacientews.getApePaciente());
+        paciente.setApePaciente(pacientews.getApePaciente());
         paciente.setDocPaciente(pacientews.getDocPaciente());
         paciente.setFecNacPaciente(pacientews.getFechaNacPaciente());
         paciente.setEmailPaciente(pacientews.getEmailPaciente());
@@ -24,7 +24,7 @@ public class PacienteConvert {
         Pacientews pacientews = new Pacientews();
         pacientews.setIdPaciente(paciente.getIdPaciente());
         pacientews.setApePaciente(paciente.getNomPaciente());
-        pacientews.setApePaciente(paciente.getApepPaciente());
+        pacientews.setApePaciente(paciente.getApePaciente());
         pacientews.setDocPaciente(paciente.getDocPaciente());
         pacientews.setFechaNacPaciente(paciente.getFecNacPaciente());
         pacientews.setEmailPaciente(paciente.getEmailPaciente());
