@@ -3,30 +3,33 @@ package pe.edu.cibertec.DSWII_CL1SOAP_Grupo2.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.CollectionId;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "paciente")
+@Table(name = "Paciente")
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer idpaci;
+    @Column(name = "IdPaciente")
+    private Integer idPaciente;
+
     @Column(name = "NomPaciente")
-    public String NomPaciente;
+    private String nomPaciente;
+
     @Column(name = "ApepPaciente")
-    public String ApepPaciente;
+    private String apepPaciente;
+
     @Column(name = "DocPaciente")
-    public String DocPaciente;
+    private String docPaciente;
+
     @Column(name = "FecNacPaciente")
-    public Date FecNacPaciente;
+    @Temporal(TemporalType.DATE)
+    private Date fecNacPaciente;
+
     @Column(name = "EmailPaciente")
-    public String EmailPaciente;
-
-
-
+    private String emailPaciente;
 }
+

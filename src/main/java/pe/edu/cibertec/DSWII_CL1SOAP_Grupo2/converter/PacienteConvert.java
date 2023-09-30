@@ -12,7 +12,7 @@ public class PacienteConvert {
 
     public Paciente convertPacienteWsToPaciente(Pacientews pacientews){
         Paciente paciente = new Paciente();
-        paciente.setIdpaci(pacientews.getIdPaciente());
+        paciente.setIdPaciente(pacientews.getIdPaciente());
         paciente.setNomPaciente(pacientews.getNomPaciente());
         paciente.setApepPaciente(pacientews.getApePaciente());
         paciente.setDocPaciente(pacientews.getDocPaciente());
@@ -22,7 +22,7 @@ public class PacienteConvert {
     }
     public Pacientews convertPacienteToPacienteWs(Paciente paciente){
         Pacientews pacientews = new Pacientews();
-        pacientews.setIdPaciente(paciente.getIdpaci());
+        pacientews.setIdPaciente(paciente.getIdPaciente());
         pacientews.setApePaciente(paciente.getNomPaciente());
         pacientews.setApePaciente(paciente.getApepPaciente());
         pacientews.setDocPaciente(paciente.getDocPaciente());
