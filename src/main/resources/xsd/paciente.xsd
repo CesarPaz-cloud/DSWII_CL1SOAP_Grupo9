@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+    <!-- Find All -->
+    <xs:element name="getPacientesRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPacientesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pacientes" type="tns:pacientews" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Find by Id -->
+    <xs:element name="getPacienteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPacienteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pacientes" type="tns:pacientews"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Save -->
+    <xs:element name="postPacientesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pacientes" type="tns:pacientews"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="postPacientesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pacientes" type="tns:pacientews"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="pacientews">
+        <xs:sequence>
+            <xs:element name="idPaciente" type="xs:int"/>
+            <xs:element name="NomPaciente" type="xs:string"/>
+            <xs:element name="ApePaciente" type="xs:string"/>
+            <xs:element name="DocPaciente" type="xs:string"/>
+            <xs:element name="FechaNacPaciente" type="xs:date"/>
+            <xs:element name="EmailPaciente" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
