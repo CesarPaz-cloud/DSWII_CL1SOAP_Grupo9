@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CollectionId;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -16,13 +17,16 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer idpaci;
     @Column(name = "NomPaciente")
-    public String nomPaci;
+    public String NomPaciente;
     @Column(name = "ApepPaciente")
-    public String apePaci;
+    public String ApepPaciente;
     @Column(name = "DocPaciente")
-    public String docPaci;
+    public String DocPaciente;
     @Column(name = "FecNacPaciente")
-    public Date fecnac;
+    public Date FecNacPaciente;
     @Column(name = "EmailPaciente")
-    public String correo;
+    public String EmailPaciente;
+
+
+
 }

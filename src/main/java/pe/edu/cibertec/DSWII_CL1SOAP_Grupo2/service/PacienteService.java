@@ -16,7 +16,7 @@ public class PacienteService {
 
     public List<Paciente> obtenerPacientes(){return pacienteRepository.findAll();}
 
-    public  Paciente obtenerDomicilioXId(Integer id) {
+    public  Paciente obtenerPacienteXId(Integer id) {
         Optional<Paciente> paciente = pacienteRepository.findById(id);
 
         if (paciente.isEmpty()){

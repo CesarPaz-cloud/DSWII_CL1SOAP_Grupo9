@@ -62,7 +62,7 @@ public class Pacientews {
     protected String docPaciente;
     @XmlElement(name = "FechaNacPaciente", required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar fechaNacPaciente;
+    protected Date fechaNacPaciente;
     @XmlElement(name = "EmailPaciente", required = true)
     protected String emailPaciente;
 
@@ -172,7 +172,7 @@ public class Pacientews {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setFechaNacPaciente(XMLGregorianCalendar value) {
+    public void setFechaNacPaciente(java.util.Date value) {
         this.fechaNacPaciente = value;
     }
 

@@ -33,14 +33,14 @@
         </xs:complexType>
     </xs:element>
     <!-- Save -->
-    <xs:element name="postPacientesRequest">
+    <xs:element name="postPacienteRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="pacientes" type="tns:pacientews"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="postPacientesResponse">
+    <xs:element name="postPacienteResponse">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="pacientes" type="tns:pacientews"/>

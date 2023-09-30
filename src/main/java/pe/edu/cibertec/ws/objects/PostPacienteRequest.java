@@ -39,7 +39,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "pacientes"
 })
 @XmlRootElement(name = "postPacientesRequest")
-public class PostPacientesRequest {
+public class PostPacienteRequest {
 
     @XmlElement(required = true)
     protected Pacientews pacientes;

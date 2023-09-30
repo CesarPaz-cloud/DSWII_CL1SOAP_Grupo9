@@ -77,19 +77,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PostPacientesRequest }
+     * Create an instance of {@link PostPacienteRequest }
      * 
      */
-    public PostPacientesRequest createPostPacientesRequest() {
-        return new PostPacientesRequest();
+    public PostPacienteRequest createPostPacientesRequest() {
+        return new PostPacienteRequest();
     }
 
     /**
-     * Create an instance of {@link PostPacientesResponse }
+     * Create an instance of {@link PostPacienteResponse }
      * 
      */
-    public PostPacientesResponse createPostPacientesResponse() {
-        return new PostPacientesResponse();
+    public PostPacienteResponse createPostPacientesResponse() {
+        return new PostPacienteResponse();
     }
 
 }
