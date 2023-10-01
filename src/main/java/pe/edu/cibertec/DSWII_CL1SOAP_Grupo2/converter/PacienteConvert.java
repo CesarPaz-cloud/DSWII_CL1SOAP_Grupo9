@@ -12,22 +12,22 @@ public class PacienteConvert {
 
     public Paciente convertPacienteWsToPaciente(Pacientews pacientews){
         Paciente paciente = new Paciente();
-        paciente.setIdPaciente(pacientews.getIdPaciente());
-        paciente.setNomPaciente(pacientews.getNomPaciente());
-        paciente.setApePaciente(pacientews.getApePaciente());
-        paciente.setDocPaciente(pacientews.getDocPaciente());
-        paciente.setFecNacPaciente(pacientews.getFechaNacPaciente());
-        paciente.setEmailPaciente(pacientews.getEmailPaciente());
+        paciente.setIdpaciente(pacientews.getIdPaciente());
+        paciente.setNompaciente(pacientews.getNomPaciente());
+        paciente.setApepaciente(pacientews.getApePaciente());
+        paciente.setDocpaciente(pacientews.getDocPaciente());
+        paciente.setFechanacpaciente(pacientews.getFechaNacPaciente());
+        paciente.setEmailpaciente(pacientews.getEmailPaciente());
         return paciente;
     }
     public Pacientews convertPacienteToPacienteWs(Paciente paciente){
         Pacientews pacientews = new Pacientews();
-        pacientews.setIdPaciente(paciente.getIdPaciente());
-        pacientews.setApePaciente(paciente.getNomPaciente());
-        pacientews.setApePaciente(paciente.getApePaciente());
-        pacientews.setDocPaciente(paciente.getDocPaciente());
-        pacientews.setFechaNacPaciente(paciente.getFecNacPaciente());
-        pacientews.setEmailPaciente(paciente.getEmailPaciente());
+        pacientews.setIdPaciente(paciente.getIdpaciente());
+        pacientews.setApePaciente(paciente.getNompaciente());
+        pacientews.setApePaciente(paciente.getApepaciente());
+        pacientews.setDocPaciente(paciente.getDocpaciente());
+        pacientews.setFechaNacPaciente(paciente.getFechanacpaciente());
+        pacientews.setEmailPaciente(paciente.getEmailpaciente());
         return pacientews;
     }
     public List<Paciente> convertPacienteWsToPaciente(List<Pacientews> pacientewsList) {

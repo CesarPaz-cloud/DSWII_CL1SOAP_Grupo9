@@ -13,23 +13,16 @@ import java.util.Date;
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdPaciente")
-    private Integer idPaciente;
-
-    @Column(name = "NomPaciente")
-    private String nomPaciente;
-
-    @Column(name = "ApePaciente")
-    private String apePaciente;
-
-    @Column(name = "DocPaciente")
-    private String docPaciente;
-
-    @Column(name = "FecNacPaciente")
-    @Temporal(TemporalType.DATE)
-    private Date fecNacPaciente;
-
-    @Column(name = "EmailPaciente")
-    private String emailPaciente;
+    public Integer idpaciente;
+    @Column(name = "nompaciente")
+    public String nompaciente;
+    @Column(name = "apepaciente")
+    public String apepaciente;
+    @Column(name = "docpaciente")
+    public String docpaciente;
+    @Column(name = "fechanacpaciente")
+    public Date fechanacpaciente;
+    @Column(name = "emailpaciente")
+    public String emailpaciente;
 }
 
